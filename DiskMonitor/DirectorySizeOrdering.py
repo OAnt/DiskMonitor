@@ -65,7 +65,6 @@ class DirectorySizeOrdering(Algo):
 		""" This method unfold the original path to return a list
 		containing all sub directories woth their sizes
 		"""
-		
 		Begin = time.time()
 		for FatherItem in self.ListPath:
 			
