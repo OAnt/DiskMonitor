@@ -1,0 +1,34 @@
+$def with (FinalQuantity, FileQuantity, EndSize, TotalSize, Result, Time, Files, Skipt)
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> DiskMonitor </title>
+
+</head>
+<body>
+<h2>Result summary</h2>
+<ul>
+	$if FinalQuantity and FileQuantity:
+		<li><em>$FinalQuantity</em> out of <em>$FileQuantity</em> folder</li>
+	$if EndSize and TotalSize:
+		<li><em>$EndSize</em> out of <em>$TotalSize</em></li>
+	$if Time:
+		<li>calculation time: <em>$Time</em> seconds</li>
+	$if Files:
+		<li><em>$Files</em> analysed</li>
+	$if Skipt:
+		<li><em>$Skipt</em> Folder skipt</li>
+</ul>
+$if Result:
+	<h2>Folder list</h2>
+	<em>
+		$for Item in Result:
+			$:Item
+	<em>
+</body>
+</html>
+
+
+	
+	

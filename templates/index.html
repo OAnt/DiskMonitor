@@ -1,0 +1,22 @@
+$def with (form, help)
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Disk Monitor </title>
+</head>
+<body>
+<h2>Inputs</h2>
+<form name="main" method="post"> 
+$if not form.valid: <p class="error">Try again</p>
+$:form.render()
+<input type = "submit">
+<h2>Help</h2>
+$if help:
+	$for Item in help:
+	<em><p>$Item</p></em>
+</form>
+</body>
+
+</html>
