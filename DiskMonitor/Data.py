@@ -10,7 +10,7 @@ discrimination factors are selected here
 """
 arguments: RootPath, Analysis, Discrimination, Factor (if needed)
 """,
-	
+    
 """
 Type of analysis
 - DirectorySizeOrdering: return sub-directories relevant with
@@ -26,7 +26,7 @@ Type of discrimination
 total size.
 Input: Pareto
 """,
-	
+    
 """
 - LimitSize: a directory is considered relevant if its size is
 bigger than specified size.
@@ -48,7 +48,7 @@ DiskMonitor asks
 the sub-module to run a first initialization procedure which will be
 used to calculate discrimination factor if needed
 """,
-	
+    
 """
 the sub-module to run its main operations using inputs given by
 DiskMonitor
@@ -62,15 +62,15 @@ import GeneralFunctions as GF
 AnalysisDict = {"directorysizeordering": DSO.DirectorySizeOrdering}
 
 DiscFuncDict = {
-				"pareto": GF.pareto_discrimination,
-				"limitsize": GF.size_discrimination
-				}
+                "pareto": GF.pareto_discrimination,
+                "limitsize": GF.size_discrimination
+                }
 
 UnitDict = {
-			'b': 1,
-			'kb': 1000,
-			'mb': 1000000,
-			'gb': 1000000000,
-			'tb': 1000000000000,
-			'pb': 1000000000000000
-			}
+            'b': 1,
+            'kb': 1000,
+            'mb': 1000000,
+            'gb': 1000000000,
+            'tb': 1000000000000,
+            'pb': 1000000000000000
+            }
